@@ -1,7 +1,7 @@
-# qingbaoju-bot
+# 聚合群KOL策略自动交易系统
 一款自动跟随聚合群KOL策略的自动化程序
 
-:ADITHYANGAMINGemojis: 面向普通用户的一键部署方案：监听 Discord 交易信号，自动在币安模拟交易合约下单，附带可视化前端（`/frontend/`）配置与查看状态。
+面向普通用户的一键部署方案：监听 Discord 交易信号，自动在币安模拟交易合约下单，附带可视化前端配置与查看状态。
 
 ## :star:主要特点
 - 前端配置：通过页面填写 Discord Token、Binance API Key/Secret，新增频道即可使用。
@@ -116,4 +116,7 @@ docker exec -it discord-follower python3 reset_password.py
 ## :bell:免责声明
 本程序含有实盘交易接口主要为作者本人自用，分享本程序主要为让各位通过模拟交易统计交易员胜率，如若开启实盘风险自担。
 
-@everyone
+<img width="1478" height="731" alt="image" src="https://github.com/user-attachments/assets/8ac748c4-b8d0-452f-ba4f-ad6668854195" />
+<img width="1485" height="728" alt="image" src="https://github.com/user-attachments/assets/6059e324-5ec9-472d-9847-d92ed7a0d39a" />
+<img width="1487" height="713" alt="image" src="https://github.com/user-attachments/assets/c73b935e-fc65-4c88-85c3-7015f315ef20" />
+
