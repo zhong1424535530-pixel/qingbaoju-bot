@@ -10,7 +10,7 @@
 - 数据持久化：配置、数据库、日志全部挂载到宿主机，容器重建不丢数据。
 
 ## :zap:快速部署（一键脚本）
-**推荐方式**：复制下方命令在服务器执行，脚本会自动安装 Docker、准备目录并启动容器或着删除就程序容器运行新程序容器。
+**推荐方式**：复制下方命令在服务器执行，脚本会自动安装 Docker、准备目录并启动容器或删除旧程序容器运行新程序。
 
 ```bash
 curl -O https://raw.githubusercontent.com/zhong1424535530-pixel/qingbaoju-bot/main/install.sh && chmod +x install.sh && ./install.sh
