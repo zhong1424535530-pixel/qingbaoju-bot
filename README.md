@@ -6,66 +6,17 @@
 ## :star:主要特点
 - 前端配置：通过页面填写 Discord Token、Binance API Key/Secret，新增频道即可使用。
 - 多入场/多止盈：自动根据风险金额计算仓位，创建止盈止损单。
-- 实时状态：订单/日志/历史盈亏在前端可查。
+- 实时状态：订单/日志/历史盈亏在前端可查，支持测试网与实盘切换。
 - 数据持久化：配置、数据库、日志全部挂载到宿主机，容器重建不丢数据。
-- 敏感数据本地化存储
 
-## :zap:快速部署（Docker，amd64）
-前提：放行 8000 端口。
+## :zap:快速部署（一键脚本）
+**推荐方式**：复制下方命令在服务器执行，脚本会自动安装 Docker、准备目录并启动容器或着删除就程序容器运行新程序容器。
 
-### 首次部署
-
-### 0) 安装 Docker
-Debian 复制整段执行：
 ```bash
-curl -fsSL https://get.docker.com | sh
-sudo systemctl enable --now docker
-docker version
+curl -O https://raw.githubusercontent.com/zhong1424535530-pixel/qingbaoju-bot/main/install.sh && chmod +x install.sh && ./install.sh
 ```
+*(注：如果无法访问GitHub，请手动上传 `install.sh` 到服务器运行)*
 
-1) 拉取镜像  
-```bash
-docker pull zhousir11/discord-follower:amd64-V1.5
-```
-
-2) 准备宿主机数据目录  
-```bash
-mkdir -p /opt/discord-follower/data/logs
-touch /opt/discord-follower/data/config_store.json
-touch /opt/discord-follower/data/binance_follower.db
-```
-
-3) 启动容器  
-```bash
- docker run -d --name discord-follower \
-   -p 8000:8000 \
-   -v /opt/discord-follower/data/config_store.json:/app/config_store.json \
-   -v /opt/discord-follower/data/binance_follower.db:/app/binance_follower.db \
-   -v /opt/discord-follower/data/logs:/app/logs \
-   zhousir11/discord-follower:amd64-V1.5
-```
-
-4) 打开前端  
-- 浏览器访问 `http://服务器IP:8000`进行登录。
-- 初始账户：admin
-- 初始密码：admin
-
-
-## :recycle:更新程序容器
-
-- 无需重新创建数据文件夹/配置/数据库，继续挂载原来的 `/opt/discord-follower/data/`。
-- 步骤：
-  ```bash
-  docker rm -f discord-follower 2>/dev/null   #删除并停止旧程序
-  docker pull zhousir11/discord-follower:amd64-V1.5  #拉取新容器
-  docker run -d --name discord-follower \
-    -p 8000:8000 \
-    -v /opt/discord-follower/data/config_store.json:/app/config_store.json \
-    -v /opt/discord-follower/data/binance_follower.db:/app/binance_follower.db \
-    -v /opt/discord-follower/data/logs:/app/logs \
-    zhousir11/discord-follower:amd64-V1.5
-  ```
-- 启动后刷新前端（Ctrl+Shift+R）确保样式与接口更新生效。
 
 ## :scroll:重置密码
 
@@ -103,12 +54,12 @@ docker exec -it discord-follower python3 reset_password.py
 
 
 ## :arrows_counterclockwise:更新日志
--  2026-01-10发布V1.5版本
-- 新增 The Lab 分类交易员信号解析器
-- 已实现盈亏改为通过实际仓位计算，不再以币安反馈的盈亏记录，这样对于多个交易员开了同币种同方向的订单计算更准确，不会因为交易所合并订单导致入场价被平均。
-- 新增频道中选择交易员有一些小BUG，选中交易员不会显示名字，不影响使用，下个版本一并解决
-- 修复了chroma个别交易更新信号的识别逻辑。
-
+-  2026-01-20发布V1.5.1版本
+- 修复了一些已知BUG
+- 增加了价格合理性验证逻辑：如果交易所发布的策略价格错误/不合理，程序会拒绝执行
+- 增加了策略去重逻辑：如果交易员发布连续两条同样策略会拒绝执行第二条
+- 增加了增加了adrikinez交易员的识别
+- 改进了部署方式，减少了操作步骤，支持一键部署更新
 
 ## :exclamation:风险提示
 本程序仅允许模拟跟单交易，辅助统计交易员胜率，加密货币交易涉及重大风险请谨慎操作
