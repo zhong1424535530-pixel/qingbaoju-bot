@@ -1,5 +1,2 @@
 {
-  "version": "1.6.0",
-  "docker_tag": "latest",
-  "changelog": "1. 增加 Docker 自更新功能\n2. 优化 UI 设置界面排版\n3. 修复了已知的一些小问题"
 }
