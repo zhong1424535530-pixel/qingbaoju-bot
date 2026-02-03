@@ -2,7 +2,7 @@
 
 # Configuration
 IMAGE_NAME="zhousir11/discord-follower"
-TAG="amd64-V1.5.1"
+TAG="amd64-V2.0.0"
 CONTAINER_NAME="discord-follower"
 DATA_DIR="/opt/discord-follower/data"
 
@@ -56,6 +56,7 @@ echo -e "${YELLOW}正在启动新容器...${NC}"
 docker run -d --name $CONTAINER_NAME \
   --restart always \
   -p 8000:8000 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$DATA_DIR/config_store.json":/app/config_store.json \
   -v "$DATA_DIR/binance_follower.db":/app/binance_follower.db \
   -v "$DATA_DIR/logs":/app/logs \
