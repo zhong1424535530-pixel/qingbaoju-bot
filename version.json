@@ -1,2 +1,5 @@
 {
+  "version": "2.0.0",
+  "changelog": "当前已是最新版本",
+  "docker_tag": "amd64-V2.0.0"
 }
