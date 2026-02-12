@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.0.0",
   "changelog": "1. 新增 Bybit 交易所支持 (实盘/模拟)\n2. 修复Bybit止损后历史记录不显示的问题\n3. 修复Bybit手动平仓未能入库的问题\n4. 优化盈亏计算逻辑",
   "docker_tag": "amd64-V2.1.1"
 }
