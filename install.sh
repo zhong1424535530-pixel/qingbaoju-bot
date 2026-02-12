@@ -2,7 +2,7 @@
 
 # Configuration
 IMAGE_NAME="zhousir11/discord-follower"
-TAG="amd64-V2.1.0"
+TAG="amd64-V2.1.1"
 CONTAINER_NAME="discord-follower"
 DATA_DIR="/opt/discord-follower/data"
 
