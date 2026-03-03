@@ -1,5 +1,5 @@
 {
-    "version": "2.1.5",
-    "changelog": "1. 修复了部分策略止损缺失的BUG\n2. 仓位计算改为当前市场价计算\n3. 增加了仓位数量显示和一键原文跳转\n4. 同步了bybit的接口数据更新",
-    "docker_tag": "amd64-V2.1.5"
+    "version": "2.1.6",
+    "changelog": "1. 增加了固定金额仓位模式选择\n2. 增加了新的chroma交易员deen\n3. 修复了仓位数量计算的一个BUG",
+    "docker_tag": "amd64-V2.1.6"
 }
