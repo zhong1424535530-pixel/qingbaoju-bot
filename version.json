@@ -1,5 +1,5 @@
 {
-    "version": "2.1.6",
-    "changelog": "1. 增加了固定金额仓位模式选择\n2. 增加了新的chroma交易员deen\n3. 修复了仓位数量计算的一个BUG",
-    "docker_tag": "amd64-V2.1.6"
+    "version": "2.1.7",
+    "changelog": "1. 增加了WWG交易员的识别\n2. 同步了chroma交易员的策略格式的更新\n3. 修复了多止盈单不能累计盈利的BUG\n4. 此版本是wwg识别的测试版本，提供给大家进行测试",
+    "docker_tag": "amd64-V2.1.7"
 }
