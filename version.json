@@ -1,5 +1,5 @@
 {
-    "version": "2.1.7",
-    "changelog": "1. 增加了WWG交易员的识别\n2. 同步了chroma交易员的策略格式的更新\n3. 修复了多止盈单不能累计盈利的BUG\n4. 此版本是wwg识别的测试版本，提供给大家进行测试",
-    "docker_tag": "amd64-V2.1.7"
+    "version": "2.1.8",
+    "changelog": "1. 紧急同步了币安新的连接规范\n2. 修复盈利重复叠加的BUG",
+    "docker_tag": "amd64-V2.1.8"
 }
