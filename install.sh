@@ -2,7 +2,7 @@
 
 # Configuration
 IMAGE_NAME="zhousir11/discord-follower"
-TAG="amd64-V2.1.7"
+TAG="amd64-V2.2.0"
 CONTAINER_NAME="discord-follower"
 DATA_DIR="/opt/discord-follower/data"
 
@@ -39,6 +39,13 @@ if [ ! -f "$DATA_DIR/binance_follower.db" ]; then
 else
     echo -e "保留现有数据库"
 fi
+if [ ! -f "$DATA_DIR/exchange.env" ]; then
+    touch "$DATA_DIR/exchange.env"
+    echo -e "已创建交易所密钥文件 exchange.env"
+else
+    echo -e "保留现有交易所密钥文件"
+fi
+chmod 600 "$DATA_DIR/exchange.env" 2>/dev/null || true
 
 # 3. Pull Image
 FULL_IMAGE="$IMAGE_NAME:$TAG"
@@ -58,6 +65,7 @@ docker run -d --name $CONTAINER_NAME \
   -p 8000:8000 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$DATA_DIR/config_store.json":/app/config_store.json \
+  -v "$DATA_DIR/exchange.env":/app/exchange.env \
   -v "$DATA_DIR/binance_follower.db":/app/binance_follower.db \
   -v "$DATA_DIR/logs":/app/logs \
   "$FULL_IMAGE"
