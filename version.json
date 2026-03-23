@@ -1,5 +1,5 @@
 {
-    "version": "2.1.9",
-    "changelog": "1. 彻底修复了币安的连接问题\n2. 移除了币安固定杠杆设置",
-    "docker_tag": "amd64-V2.1.9"
+    "version": "2.2.0",
+    "changelog": "1. 同步了chroma的策略信息格式\n2. 增加了交易所API KEY的安全性",
+    "docker_tag": "amd64-V2.2.0"
 }
