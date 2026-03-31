@@ -1,5 +1,5 @@
 {
-    "version": "2.2.0",
-    "changelog": "1. 同步了chroma的策略信息格式\n2. 增加了交易所API KEY的安全性",
-    "docker_tag": "amd64-V2.2.0"
+    "version": "2.2.1",
+    "changelog": "1. 进一步完善了chroma的新的策略格式",
+    "docker_tag": "amd64-V2.2.1"
 }
