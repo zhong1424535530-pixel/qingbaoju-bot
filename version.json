@@ -1,5 +1,5 @@
 {
-    "version": "2.2.1",
-    "changelog": "1. 进一步完善了chroma的新的策略格式",
-    "docker_tag": "amd64-V2.2.1"
+    "version": "3.0.0",
+    "changelog": "1. 增加了WWG交易员的识别\n2. 历史记录筛选器支持多选\n3. 修复了一些BUG",
+    "docker_tag": "amd64-V3.0.0"
 }
