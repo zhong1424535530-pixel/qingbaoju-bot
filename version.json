@@ -1,5 +1,5 @@
 {
-    "version": "3.0.0",
+    "version": "3.2.0",
     "changelog": "1. 增加了历史数据一键清空功能\n2. 修复了历史数据只显示500条的BUG",
-    "docker_tag": "amd64-V3.1.0"
+    "docker_tag": "amd64-V3.2.0"
 }
