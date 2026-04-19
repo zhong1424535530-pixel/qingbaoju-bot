@@ -1,5 +1,5 @@
 {
-    "version": "3.3.0",
-    "changelog": "1. 修复了一些BUG",
-    "docker_tag": "amd64-V3.3.0"
+    "version": "3.3.1",
+    "changelog": "1. 修复了chroma多入场订单的止损逻辑的问题",
+    "docker_tag": "amd64-V3.3.1"
 }
