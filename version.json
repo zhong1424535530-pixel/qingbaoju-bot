@@ -1,5 +1,5 @@
 {
-    "version": "3.3.1",
-    "changelog": "1. 修复了chroma多入场订单的止损逻辑的问题",
-    "docker_tag": "amd64-V3.3.1"
+    "version": "3.4.0",
+    "changelog": "1. 修复了未平仓订单的盈亏计算逻辑\n2. 增加了策略开平仓通知\n3. 修复了历史记录盈亏计算的一些bug",
+    "docker_tag": "amd64-V3.4.0"
 }
