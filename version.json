@@ -1,5 +1,5 @@
 {
-    "version": "5.1.0",
-    "changelog": "1. 优化 Binance 连接稳定性\n2. 优化 Discord 连接稳定性\n3. 新增手续费折扣系数\n4. 优化前端界面",
-    "docker_tag": "amd64-V5.1.0"
+    "version": "5.2.0",
+    "changelog": "1. 优化系统运行稳定性\n2. 增强 Binance 连接稳定性\n3. 修复其他已知问题",
+    "docker_tag": "amd64-V5.2.0"
 }
